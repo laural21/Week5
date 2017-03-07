@@ -16,12 +16,12 @@ def linear(x):
 
 #quadratic function
 def quad(x):
-# change: return a quadratic function
+    x = x**2
     return x
 
 #cubical function
 def cube(x):
-# change: return a cubical function
+    x = x**3
     return x
 
 #log function
@@ -36,7 +36,7 @@ def n_logn(x):
 
 #exponential function
 def exp_2(x):
-# change: return a exponential function
+    x = 2 ** x
     return x
 
 # replace the following line, my_range is a list from 1 to LIMIT integers
@@ -51,11 +51,11 @@ f = [exp_2(x) for x in my_range]
 
 # add labels to all the curves
 plt.plot(a, 'r-', label = 'linear') # liearn function is red
-plt.plot(b, 'g-') # quadratic function is green
-plt.plot(c, 'b-') # cubical function is blue
-plt.plot(d, 'c-') # log(n) is cyan
-plt.plot(e, 'y-') # n*log(n) is yellow
-plt.plot(f, 'm-') # expoential function of 2 is magenta
-# uncomment below to see the behavior when x is small
-#plt.xlim(0, 4); plt.ylim(0, 10)
+plt.plot(b, 'g-', label = 'quadratic') # quadratic function is green
+plt.plot(c, 'b-', label = 'cubic') # cubical function is blue
+plt.plot(d, 'c-', label = 'logarithm') # log(n) is cyan
+plt.plot(e, 'y-', label = 'n*logarithm') # n*log(n) is yellow
+plt.plot(f, 'm-', label = 'exponential') # expoential function of 2 is magenta
+
+plt.xlim(0, 4); plt.ylim(0, 10)
 plt.legend(loc='upper left')
